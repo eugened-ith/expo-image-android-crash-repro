@@ -1,11 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import 'expo-dev-client';
+
+import { Image } from 'expo-image';
+import { StyleSheet, View } from 'react-native';
+
+const blurhash =
+  '|rF?hV%2WCj[ayj[a|j[az_NaeWBj@ayfRayfQfQM{M|azj[azf6fQfQfQIpWXofj[ayj[j[fQayWCoeoeaya}j[ayfQa{oLj?j[WVj[ayayj[fQoff7azayj[ayj[j[ayofayayayj[fQj[ayayj[ayfjj[j[ayjuayj[';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Image
+        style={styles.image}
+        source="https://authencity.infura-ipfs.io/ipfs/QmZfD91daUztzd2ssx9o44yf2erxGMGb926uJshausLmeQ"
+        placeholder={blurhash}
+        contentFit="cover"
+        transition={1000}
+      />
     </View>
   );
 }
@@ -16,5 +26,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  image: {
+    flex: 1,
+    width: '100%',
+    backgroundColor: '#0553',
   },
 });
